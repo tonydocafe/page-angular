@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  backend:
+    build: ./backend/arquivos
+    container_name: adonis_backend
+    ports:
+      - "3333:3333"
+    volumes:
+      - ./backend/arquivos:/app
+      - /app/node_modules
+    # Adonis usa SQLite por padrão → sem DB externo necessário
+
+  angular:
+    build: ./angular/moment
+    container_name: angular_app
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./angular/moment:/app
+      - /app/node_modules
+    depends_on:
+      - backend
