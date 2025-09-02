@@ -7,6 +7,6 @@
 - docker-compose build angular 
 - docker-compose up -d angular
 
-acesse em localhost:4200 ou acesse 
-angular/moment/src/enviroment.ts 
-e subistitua localhost para seu IP(Esse segundo caso é necessario se for testar em redes, fora do CLI)
+Acesse em localhost:4200 para navegar nas paginas.
+
+Caso queira tentar em outros dispositivos da rede angular/moment/src/enviroment.ts e subistitua localhost pelo seu IP
